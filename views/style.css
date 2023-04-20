@@ -1,0 +1,17 @@
+body {
+    padding-top: 50px;
+    padding-left: 40%;
+    background-color: #f2f2f2;
+    }
+    
+    .container {
+    margin-top: 80px;
+    }
+    
+    .form-group {
+    margin-bottom: 20px;
+    }
+    
+    .btn-block {
+    margin-top: 20px;
+    }
