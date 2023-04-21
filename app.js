@@ -7,12 +7,13 @@ var express = require('express');
 var app = module.exports = express();
 
 var httpServer = http.createServer(app);
-const app = express();
+// const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/static', express.static(path.join(__dirname, 'routes')));
 
-app.set('views', __dirname + '/views'); // general config
+// app.set('views', __dirname + '/views'); // general config
 app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => {
@@ -20,26 +21,26 @@ app.get("/", (req, res) => {
   res.render('index');
 });
 
-// app.get("/", (req.body)=>{
-//  res.render('Admin');
-// });
+app.get("/index", (req,resdy)=>{
+ res.render('index');
+});
 
-// app.post("/index", (req,res) => {
-//   // console.log('asjkxh');
-//   res.render('admin');
-//  });
+app.get("/admin", (req,res) => {
+  console.log('asjkxh');
+  res.render('admin');
+ });
 
-//  app.post("/apply", (req, res) => {
-//   res.send('all is well');
-//  });
-
-
-// app.post("/", (req, res) => {
-//   res.render('admin');
-//  });
+ app.get("/admin", (req, res) => {
+  res.render('apply');
+ });
 
 
-app.use('/static', express.static(path.join(__dirname, 'routes')));
+app.post("/", (req, res) => {
+  res.render('admin');
+ });
+
+
+
 
 app.listen(4000, () => {
 

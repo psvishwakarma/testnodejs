@@ -7,31 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>index</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
-    <script src="/static/index.js"></script>
+    
 </head>
   <body>
     
-    <div class="container  col-md-4">
-      <div class="card" style="width: 18rem;">            
-          <div class="card-header">Login Form</div>    
-          <div class="card-body">
-              <form  class="form" action="/" method="POST">
+    <div class="container-fluid m-auto mt-5 pt-4">
+              <form  class="p-5 border bg-body rounded m-auto col-12 col-md-6 col-lg-4 mt-4">
                   <div class="mb-3">
-                      <label for="email-reg" class="form-label">Email</label>
-                      <input type="text" class="form-control" id="email-reg" name="email">                        
+                      <label for="username" class="form-label">username</label>
+                      <input type="text" class="form-control" id="username" name="username">                        
                   </div>
                   <div class="mb-3">
-                      <label for="password-reg" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password-reg" name="password">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" name="password">
                   </div>
-                  <input type="button" class="btn btn-primary" onclick="getInfo()" value="submit">submit</input>
+                  <input type="button" class="btn btn-primary" onclick="getInfo()" value="submit"></input>
               </form>
-          </div>
-      </div>
+          
   </div>
-  </div>
+  
+  <script src="/static/index.js"></script>
   </body>
   
  

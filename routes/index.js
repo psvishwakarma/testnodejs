@@ -2,27 +2,28 @@
 // var pass = "12345";
 function getInfo() {
 
-  event.preventDefault();
+  // event.preventDefault();
   //console.log(true);
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  var credentials = [
-    { username: "user1", password: "password1" },
-    { username: "user2", password: "password2" },
-    { username: "user3", password: "password3" }
-  ];
-  for (var i = 0; i < credentials.length; i++) {
-    if (username === credentials[i].username && password === credentials[i].password) {
+  var Username = document.getElementById("Username").value;
+  var Password = document.getElementById("Password").value;
+
+  // var credentials = [
+  //   { Username: "user1", Password: "password1" },
+  //   { Username: "user2", Password: "password2" },
+  //   { Username: "user3", Password: "password3" }
+  // ];
+  // for (var i = 0; i < credentials.length; i++) {
+    if ((Username === 'user1' && Password === 'password1')||(Username === 'user2' && Password === 'password2')||(Username === 'user3' && Password === 'password3'))
+      {
       alert("Login successful!");
-      window.location.assign('admin');
-      return;
+      window.location.assign('/admin');
+      
     }
     else {
       alert('user or pass is invalid');
     }
 
-  }
-};
+  };
 
 
 
