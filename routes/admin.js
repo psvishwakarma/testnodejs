@@ -4,7 +4,7 @@ if(sessionStorage.getItem('flag')){
 }
 
 var time = 0;
-var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+// var myModal = new bootstrap.Modal(document.getElementById('myModal'));
 window.onmousemove = function () { time = 0; }
 window.onkeypress = function () { time = 0; }
 const int = setInterval(function () {
@@ -12,7 +12,7 @@ const int = setInterval(function () {
     if (time > 5) {
         clearInterval(int);
         sessionStorage.clear();
-        myModal.show();
+        // myModal.show();
 
     }
 }, 1000);

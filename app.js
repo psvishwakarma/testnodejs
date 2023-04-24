@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/index", (req,resdy)=>{
- res.render('index');
+ res.render('admin');
 });
 
 app.get("/admin", (req,res) => {
@@ -30,14 +30,35 @@ app.get("/admin", (req,res) => {
   res.render('admin');
  });
 
- app.get("/admin", (req, res) => {
+ app.get("/apply", (req, res) => {
   res.render('apply');
  });
 
 
-app.post("/", (req, res) => {
-  res.render('admin');
- });
+ app.post('/apply', (req, res) => {
+  // let data = req.body;
+  console.log('wed');
+//   var Name= req.body.Name;
+// var Add = req.body.Add;
+// var Salary = req.body.Salary;
+// var Mobileno= req.body.Mobileno;
+//   var  data =[ {
+//     name: "",
+//     address: "",
+//     Salary:"",
+//     mobileno:""
+// }];
+// var  JSONString = JSON.stringify(data).writeFile('./inputdata.json',JSONString, err => {
+//     if (err) {
+//         console.log('Error writing file', err);
+//     } else {
+//         console.log('Successfully wrote file');
+//     }
+// });
+  
+
+//   // res.send('data ' + JSON.stringify(data));
+});
 
 
 

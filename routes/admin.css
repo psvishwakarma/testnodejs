@@ -71,7 +71,7 @@ body {
     margin-right: 16px;
 }
 
-.nav h2 {
+#nav h2 {
     font-size: 20px;
     color: red;
     font-weight: bold;
