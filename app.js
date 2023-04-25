@@ -36,8 +36,9 @@ app.get("/admin", (req,res) => {
 
 
  app.post('/apply', (req, res) => {
-  // let data = req.body;
+  
   console.log('wed');
+  let data = req.body;
 //   var Name= req.body.Name;
 // var Add = req.body.Add;
 // var Salary = req.body.Salary;
@@ -48,7 +49,7 @@ app.get("/admin", (req,res) => {
 //     Salary:"",
 //     mobileno:""
 // }];
-// var  JSONString = JSON.stringify(data).writeFile('./inputdata.json',JSONString, err => {
+// var  JSONString = JSON.stringify(data).writefile('./inputdata.json',JSONString, err => {
 //     if (err) {
 //         console.log('Error writing file', err);
 //     } else {
@@ -57,7 +58,7 @@ app.get("/admin", (req,res) => {
 // });
   
 
-//   // res.send('data ' + JSON.stringify(data));
+  res.send('data ' + JSON.stringify(data));
 });
 
 
