@@ -1,7 +1,8 @@
 var http = require('http');
 var module = require('module');
+const fs = require('fs');
 
-var path  = require('path')
+var path = require('path')
 // var logger = require('morgan');
 var express = require('express');
 var app = module.exports = express();
@@ -21,45 +22,60 @@ app.get("/", (req, res) => {
   res.render('index');
 });
 
-app.get("/index", (req,resdy)=>{
- res.render('admin');
+app.get("/index", (req, resdy) => {
+  res.render('admin');
 });
 
-app.get("/admin", (req,res) => {
+app.get("/admin", (req, res) => {
   console.log('asjkxh');
   res.render('admin');
- });
-
- app.get("/apply", (req, res) => {
-  res.render('apply');
- });
-
-
- app.post('/apply', (req, res) => {
-  
-  console.log('wed');
-  let data = req.body;
-//   var Name= req.body.Name;
-// var Add = req.body.Add;
-// var Salary = req.body.Salary;
-// var Mobileno= req.body.Mobileno;
-//   var  data =[ {
-//     name: "",
-//     address: "",
-//     Salary:"",
-//     mobileno:""
-// }];
-// var  JSONString = JSON.stringify(data).writefile('./inputdata.json',JSONString, err => {
-//     if (err) {
-//         console.log('Error writing file', err);
-//     } else {
-//         console.log('Successfully wrote file');
-//     }
-// });
-  
-
-  res.send('data ' + JSON.stringify(data));
 });
+
+app.get("/apply", (req, res) => {
+  res.render('apply');
+});
+
+
+
+
+
+app.post('/priti', (req, res) => {
+
+  console.log(req.body);
+  const d = JSON.stringify(req.body);
+  console.log(d);
+  fs.writeFile("new.json", d, (err, data) => {
+    if (err) {
+      // throw err;
+      return res.status(400).send("error");
+    }
+    return res.status(200).send("Success");
+  });
+  // console.log('wed');
+  // let data = req.body;
+  // console.log(data);
+  // //   var Name= req.body.Name;
+  // var Add = req.body.Add;
+  // var Salary = req.body.Salary;
+  // var Mobileno= req.body.Mobileno;
+  //   var  data =[ {
+  //     name: "",
+  //     address: "",
+  //     Salary:"",
+  //     mobileno:""
+  // }];
+  // var  JSONString = JSON.stringify(data).writefile('./inputdata.json',JSONString, err => {
+  //     if (err) {
+  //         console.log('Error writing file', err);
+  //     } else {
+  //         console.log('Successfully wrote file');
+  //     }
+});
+
+
+
+
+
 
 
 
