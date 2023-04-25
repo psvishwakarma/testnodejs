@@ -1,30 +1,41 @@
-document.querySelector('Submit').addEventListener('click', (e) => {
-    e.preventDefault()
 
-    const Name = document.getElementById('Name').value
-    const Add = document.getElementById('Add').value
-    const Salary= document.getElementById('Salary').value
-    const Mobileno = document.getElementById('Mobileno').value
-    const li = document.querySelector('li')​
+function getdata() {
 
-    const data = {Name,Add,Salary,Mobileno}
+    // console.log("sdcfdf");
+    event.preventDefault()
+    const form = document.querySelector('#form-data');
 
-    const handleFormData = async () => {
-       const sent = await fetch('/registration', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
+    const formdata = new FormData(form);
 
-        try {
-            const response = await sent.json()
-            li.textContent = `${response.Name} => ${response.Add},=> ${response.Salary},=> ${response.Mobileno}`
-        } catch (error) {
-           console.log(error)
-        }
-    }
+    console.log(formdata);
+    
 
-    handleFormData();
-});
+//     var Name = document.getElementById('name').value
+//     var Add = document.getElementById('add').value
+//     var Salary = document.getElementById('salary').value
+//     var Mobileno = document.getElementById('mobileno').value
+//     // var li = document.querySelector('li')​
+
+//     const data = { Name, Add, Salary, Mobileno }
+
+//     const handleFormData = async () => {
+//         const sent = await fetch('/registration', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(data)
+//         })
+
+//         try {
+//             const response = await sent.json()
+//             li.textContent = `${response.Name} => ${response.Add},=> ${response.Salary},=> ${response.Mobileno}`
+//         } catch (error) {
+//             console.log(error)
+//         }
+//     }
+
+//     handleFormData();
+// });
+
+}
