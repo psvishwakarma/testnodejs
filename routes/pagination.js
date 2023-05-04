@@ -2,14 +2,15 @@ const table = document.getElementById('myTable');
 const tbody = table.querySelector('tbody');
 
 const rows = tbody.querySelectorAll('tr');
+console.log("rows",rows);
 
-const pagecount = Math.ceil(rows.length / 4);
+const pagecount = Math.ceil(rows.length / 2);
 
 function displayPage(page) {
 
-    const startIndex = (page - 1) * 4;
+    const startIndex = (page - 1) * 2;
 
-    const endIndex = startIndex + 4;
+    const endIndex = startIndex + 2;
 
 
 

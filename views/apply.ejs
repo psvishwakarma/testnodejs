@@ -17,33 +17,39 @@
 <body>
     <div class="todo">
     <div class="container m-auto mt-5">
+        
         <form class="shadow p-3 mb-5 bg-body rounded m-auto col-12 col-md-6 col-lg-4" id="form-data" action="/apply" method="POST" autocomplete="off">
             <h1 class="m-auto">Form</h1>
-            <div class="mb-3">
+            <div class="row">
+            <div class=" col-sm-6 mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" autocomplete="false"
                     placeholder="Full Name">
             </div>
-            <div class="mb-3">
+            <div class=" col-sm-6 mb-3">
                 <label for="add" class="form-label">Address</label>
                 <input type="text" class="form-control" id="add" name="add" 
                     placeholder="add">
             </div>
-            <div class="mb-3">
+            </div>
+            <div class="row">
+            <div class=" col-sm-4 mb-3">
                 <label for="salary" class="form-label">Salary</label>
                 <input type="integer" class="form-control" id="salary" name="salary" 
                     placeholder="Salary">
                 
             </div>
-            <div class="mb-3">
+            
+            <div class=" col-sm-4 mb-3">
                 <label for="mobileno" class="form-label">Mobileno</label>
                 <input type="mobileno" class="form-control" id="mobileno" name="mobileno" 
                     placeholder="mobileno">
                 
             </div>
+            </div>
             <button type="submit" class="btn btn-primary" onclick="getdata()">Submit</button>
         </form>
-        
+        </div>
     </div>
 </div>
     

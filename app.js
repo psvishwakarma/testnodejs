@@ -16,15 +16,16 @@ app.use('/static', express.static(path.join(__dirname, 'routes')));
 
 // app.set('views', __dirname + '/views'); // general config
 app.set('view engine', 'ejs');
+app.set("views",path.join("views"));
 
 app.get("/", (req, res) => {
   //   res.sendFile(__dirname + "/Apply.html");
   res.render('index');
 });
 
-app.get("/index", (req, resdy) => {
-  res.render('admin');
-});
+// app.get("/index", (req, res) => {
+//   res.render('admin');
+// });
 
 app.get("/admin", (req, res) => {
   console.log('asjkxh');
@@ -34,6 +35,13 @@ app.get("/admin", (req, res) => {
 app.get("/apply", (req, res) => {
   res.render('apply');
 });
+app.get("/admin", (req, res) => {
+  res.render('index');
+});
+
+// app.get("/login",(req,res)=>{
+//   res.render('index');
+// })
 
 
 
